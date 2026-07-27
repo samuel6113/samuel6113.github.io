@@ -176,6 +176,58 @@
       vertical-align: middle;
     }
 
+    /* Collapsible entry (native <details>/<summary>) */
+    .t-item summary {
+      cursor: pointer;
+      list-style: none;
+      display: block;
+      position: relative;
+      padding-right: 52px;
+    }
+
+    .t-item summary::-webkit-details-marker { display: none; }
+
+    /* round toggle button with a chevron */
+    .t-item summary::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 34px;
+      height: 34px;
+      transform: translateY(-50%);
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background-color: var(--surface);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234f8cff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.2s ease, border-color 0.15s ease, background-color 0.15s ease;
+    }
+
+    .t-item summary:hover::after {
+      border-color: var(--accent);
+      background-color: var(--bg);
+    }
+
+    .t-item details[open] summary::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    /* entries with no expandable content: no pointer, no button */
+    .t-item details.no-body summary { cursor: default; }
+    .t-item details.no-body summary::after { display: none; }
+
+    .t-item summary:hover .t-title { color: var(--accent); }
+
+    .t-item summary:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+      border-radius: 8px;
+    }
+
+    .t-body { padding-top: 6px; }
+
     .t-desc { margin: 0; color: var(--text); }
 
     .t-desc ul {
@@ -349,21 +401,31 @@
         var container = document.getElementById("timeline");
         (tl.items || []).forEach(function (item) {
           var article = el("article", { className: "t-item" });
-          article.appendChild(el("div", { className: "t-date", textContent: item.date || "" }));
-          article.appendChild(el("h3", { className: "t-title", textContent: item.title || "" }));
 
+          // Collapsible: summary (always visible) + body (shown when open).
+          var hasBody = (item.bullets && item.bullets.length) || item.media;
+          var details = el("details");
+          if (item.open) details.open = true;
+          if (!hasBody) details.className = "no-body";  // hide the toggle chevron
+
+          var summary = el("summary");
+          summary.appendChild(el("div", { className: "t-date", textContent: item.date || "" }));
+          summary.appendChild(el("h3", { className: "t-title", textContent: item.title || "" }));
           var org = el("p", { className: "t-org", textContent: (item.org || "") + " " });
           if (item.kind) org.appendChild(el("span", { className: "kind", textContent: item.kind }));
-          article.appendChild(org);
+          summary.appendChild(org);
+          details.appendChild(summary);
 
+          var body = el("div", { className: "t-body" });
           if (item.bullets && item.bullets.length) {
             var ul = el("ul");
             item.bullets.forEach(function (b) { ul.appendChild(el("li", { innerHTML: fmt(b) })); });
-            article.appendChild(el("div", { className: "t-desc" }, [ul]));
+            body.appendChild(el("div", { className: "t-desc" }, [ul]));
           }
+          if (item.media) body.appendChild(renderMedia(item.media));
+          details.appendChild(body);
 
-          if (item.media) article.appendChild(renderMedia(item.media));
-
+          article.appendChild(details);
           container.appendChild(article);
         });
         document.getElementById("timeline-section").hidden = false;
