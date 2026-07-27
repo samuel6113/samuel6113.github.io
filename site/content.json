@@ -1,12 +1,12 @@
 {
   "name": "Samuel Wang",
-  "role": "Your role / tagline here",
+  "role": "Perception @ Zipline",
   "photo": "profile.png",
   "photoAlt": "Samuel Wang",
 
   "intro": [
-    "[Intro paragraph one — who you are, what you do, and what drives you. Replace this placeholder text.]",
-    "[Intro paragraph two — background, focus areas, or what you're looking for next. Replace this placeholder text.]"
+    "I'm a roboticist based in the San Francisco Bay Area, passionate about building robots that can understand their environment, take on intelligent tasks, and make a real, positive impact on people's lives. I was born in Southern California, raised in Taiwan for 20 years, and moved back to the States for grad school and work. I hold an MS in Robotics from Carnegie Mellon University, and an MS and BS in Mechanical Engineering from National Chiao Tung University (交通大學).",
+    ""
   ],
 
   "timeline": {
