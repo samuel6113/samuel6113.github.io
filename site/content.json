@@ -1,0 +1,48 @@
+{
+  "name": "Samuel Wang",
+  "role": "Your role / tagline here",
+  "photo": "profile.png",
+  "photoAlt": "Samuel Wang",
+
+  "intro": [
+    "[Intro paragraph one — who you are, what you do, and what drives you. Replace this placeholder text.]",
+    "[Intro paragraph two — background, focus areas, or what you're looking for next. Replace this placeholder text.]"
+  ],
+
+  "timeline": {
+    "title": "Experience & Projects",
+    "subtitle": "Projects and roles across school and companies.",
+    "items": [
+      {
+        "date": "Mon YYYY – Mon YYYY",
+        "title": "Project or Role Title",
+        "org": "Company Name",
+        "kind": "Company",
+        "bullets": [
+          "[What you built / did — bullet one.]",
+          "[Impact or result — bullet two.]"
+        ]
+      },
+      {
+        "date": "Mon YYYY – Mon YYYY",
+        "title": "Project or Role Title",
+        "org": "Company Name",
+        "kind": "Company",
+        "bullets": [
+          "[What you built / did — bullet one.]",
+          "[Impact or result — bullet two.]"
+        ]
+      },
+      {
+        "date": "Mon YYYY – Mon YYYY",
+        "title": "School Project or Coursework",
+        "org": "University / School Name",
+        "kind": "School",
+        "bullets": [
+          "[Description of the project — bullet one.]",
+          "[Outcome or what you learned — bullet two.]"
+        ]
+      }
+    ]
+  }
+}

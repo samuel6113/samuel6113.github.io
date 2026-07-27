@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>Samuel Wang</title>
+  <meta name="description" content="Personal website of Samuel Wang." />
+  <link rel="icon" href="data:," />
+  <style>
+    /* ============================================================
+       THEME TOKENS — dark theme; tweak colors/spacing here
+       ============================================================ */
+    :root {
+      --bg: #0e1116;
+      --surface: #171b22;
+      --text: #e6e8eb;
+      --muted: #9aa4b2;
+      --accent: #4f8cff;
+      --line: #262c36;
+      --radius: 14px;
+      --maxw: 860px;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================================
+       INTRO — two paragraphs left, photo top-right
+       ============================================================ */
+    .intro {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      padding: 72px 0 56px;
+    }
+
+    .intro-text { flex: 1 1 auto; }
+
+    .intro-text h1 {
+      font-size: 2.4rem;
+      line-height: 1.15;
+      margin: 0 0 4px;
+      letter-spacing: -0.02em;
+    }
+
+    .intro-text .role {
+      color: var(--accent);
+      font-weight: 600;
+      margin: 0 0 20px;
+    }
+
+    .intro-text p {
+      margin: 0 0 16px;
+      color: var(--text);
+    }
+
+    .intro-photo {
+      flex: 0 0 auto;
+      width: 180px;
+    }
+
+    .intro-photo img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;      /* circle; change to var(--radius) for a rounded square */
+      object-fit: cover;
+      display: block;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+    }
+
+    /* ============================================================
+       TIMELINE — vertical, single-sided
+       ============================================================ */
+    .section-title {
+      font-size: 1.5rem;
+      margin: 0 0 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      margin: 0 0 40px;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 0 0 80px;
+      padding-left: 32px;
+      border-left: 2px solid var(--line);
+    }
+
+    .t-item {
+      position: relative;
+      padding: 0 0 40px 8px;
+    }
+
+    .t-item:last-child { padding-bottom: 0; }
+
+    /* the dot */
+    .t-item::before {
+      content: "";
+      position: absolute;
+      left: -41px;
+      top: 4px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 0 2px var(--line);
+    }
+
+    .t-date {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .t-title {
+      font-size: 1.15rem;
+      margin: 4px 0 2px;
+    }
+
+    .t-org {
+      color: var(--accent);
+      font-weight: 500;
+      margin: 0 0 10px;
+    }
+
+    .t-org .kind {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 1px 8px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      vertical-align: middle;
+    }
+
+    .t-desc { margin: 0; color: var(--text); }
+
+    .t-desc ul {
+      margin: 6px 0 0;
+      padding-left: 18px;
+    }
+
+    .load-error {
+      color: var(--muted);
+      padding: 40px 0;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 640px) {
+      .intro {
+        flex-direction: column-reverse;
+        gap: 24px;
+        padding: 48px 0 40px;
+        align-items: flex-start;
+      }
+      .intro-text h1 { font-size: 2rem; }
+      .intro-photo, .intro-photo img { width: 120px; height: auto; }
+      .intro-photo img { height: 120px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <!-- Content is rendered from content.json by the script below -->
+    <section class="intro" id="intro" hidden>
+      <div class="intro-text" id="intro-text"></div>
+      <div class="intro-photo">
+        <img id="intro-photo" src="" alt="" />
+      </div>
+    </section>
+
+    <section id="timeline-section" hidden>
+      <h2 class="section-title" id="timeline-title"></h2>
+      <p class="section-sub" id="timeline-sub"></p>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <p class="load-error" id="load-error" hidden></p>
+  </main>
+
+  <script>
+    // Render the page from the human-readable content.json file.
+    (function () {
+      function el(tag, props, children) {
+        var node = document.createElement(tag);
+        if (props) Object.keys(props).forEach(function (k) { node[k] = props[k]; });
+        (children || []).forEach(function (c) {
+          node.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
+        });
+        return node;
+      }
+
+      function render(data) {
+        // Head + intro
+        if (data.name) document.title = data.name;
+
+        var introText = document.getElementById("intro-text");
+        introText.appendChild(el("h1", { textContent: data.name || "" }));
+        if (data.role) introText.appendChild(el("p", { className: "role", textContent: data.role }));
+        (data.intro || []).forEach(function (p) {
+          introText.appendChild(el("p", { textContent: p }));
+        });
+
+        var photo = document.getElementById("intro-photo");
+        photo.src = data.photo || "profile.png";
+        photo.alt = data.photoAlt || data.name || "";
+        document.getElementById("intro").hidden = false;
+
+        // Timeline
+        var tl = data.timeline || {};
+        document.getElementById("timeline-title").textContent = tl.title || "";
+        document.getElementById("timeline-sub").textContent = tl.subtitle || "";
+
+        var container = document.getElementById("timeline");
+        (tl.items || []).forEach(function (item) {
+          var article = el("article", { className: "t-item" });
+          article.appendChild(el("div", { className: "t-date", textContent: item.date || "" }));
+          article.appendChild(el("h3", { className: "t-title", textContent: item.title || "" }));
+
+          var org = el("p", { className: "t-org", textContent: (item.org || "") + " " });
+          if (item.kind) org.appendChild(el("span", { className: "kind", textContent: item.kind }));
+          article.appendChild(org);
+
+          if (item.bullets && item.bullets.length) {
+            var ul = el("ul");
+            item.bullets.forEach(function (b) { ul.appendChild(el("li", { textContent: b })); });
+            article.appendChild(el("div", { className: "t-desc" }, [ul]));
+          }
+          container.appendChild(article);
+        });
+        document.getElementById("timeline-section").hidden = false;
+      }
+
+      fetch("content.json", { cache: "no-cache" })
+        .then(function (r) {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.json();
+        })
+        .then(render)
+        .catch(function (err) {
+          var e = document.getElementById("load-error");
+          e.textContent = "Could not load content.json (" + err.message +
+            "). If viewing locally, run a local server, e.g. `python3 -m http.server` in the site/ folder.";
+          e.hidden = false;
+        });
+    })();
+  </script>
+</body>
+</html>
