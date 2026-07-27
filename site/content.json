@@ -4,10 +4,14 @@
   "photo": "profile.png",
   "photoAlt": "Samuel Wang",
 
+  "links": [
+    { "type": "linkedin", "url": "https://www.linkedin.com/in/samuel6113/", "label": "LinkedIn" }
+  ],
+
   "intro": [
     "I'm a roboticist based in the San Francisco Bay Area, passionate about building robots that can understand their environment, take on intelligent tasks, and make a real, positive impact on people's lives.",
-    "I was born in Southern California, raised in Taiwan for 20 years, and moved back to the States for grad school and work. I hold **an MS in Robotics from Carnegie Mellon University**, and **an MS and BS in Mechanical Engineering** from National Chiao Tung University (交通大學).",
-    "I built an RC quadrotor back in 2014 for fun and then accidentally kept working on flying drones for over a decade now. Since then, I've worked at four drone companies: **Near Earth Autonomy**, **DJI (大疆)**, **Skydio**, and most recently **Zipline**. Drones are an incredible platform, challenging enough to be a serious robotics problem, yet practical to make an incremental impact on everyday life. Plus, there's something oddly satisfying about analyzing aerial imagery shot from 300 feet up.."
+    "I was born in Southern California, raised in Taiwan for 20 years, and moved back to the States for grad school and work. I hold **an MS in Robotics** from Carnegie Mellon University, and **an MS and BS in Mechanical Engineering** from National Chiao Tung University (交通大學).",
+    "I built an RC quadrotor back in 2014 for fun and then accidentally kept working on flying drones for over a decade now. Since then, I've worked at four drone companies: **Near Earth Autonomy**, **DJI (大疆)**, **Skydio**, and most recently **Zipline**. Drones are an incredible platform, challenging enough to be a serious robotics problem, yet practical to make an incremental impact on everyday life. Plus, there's something oddly satisfying about analyzing aerial images from 300 feet up.."
   ],
 
   "timeline": {
@@ -16,13 +20,14 @@
     "items": [
       {
         "date": "Mon YYYY – Mon YYYY",
-        "title": "Project or Role Title",
-        "org": "Company Name",
+        "title": "Autonomy Engineer",
+        "org": "Skydio",
         "kind": "Company",
         "bullets": [
           "[What you built / did — bullet one.]",
           "[Impact or result — bullet two.]"
-        ]
+        ],
+        "media": { "type": "image", "src": "skydio_logo.png", "alt": "Skydio", "width": 300 }
       },
       {
         "date": "Mon YYYY – Mon YYYY",
@@ -32,7 +37,8 @@
         "bullets": [
           "[What you built / did — bullet one.]",
           "[Impact or result — bullet two.]"
-        ]
+        ],
+        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=tXBwxYIHPrQ", "alt": "Skydio video" }
       },
       {
         "date": "Mon YYYY – Mon YYYY",
