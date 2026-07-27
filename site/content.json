@@ -5,8 +5,9 @@
   "photoAlt": "Samuel Wang",
 
   "intro": [
-    "I'm a roboticist based in the San Francisco Bay Area, passionate about building robots that can understand their environment, take on intelligent tasks, and make a real, positive impact on people's lives. I was born in Southern California, raised in Taiwan for 20 years, and moved back to the States for grad school and work. I hold an MS in Robotics from Carnegie Mellon University, and an MS and BS in Mechanical Engineering from National Chiao Tung University (交通大學).",
-    ""
+    "I'm a roboticist based in the San Francisco Bay Area, passionate about building robots that can understand their environment, take on intelligent tasks, and make a real, positive impact on people's lives.",
+    "I was born in Southern California, raised in Taiwan for 20 years, and moved back to the States for grad school and work. I hold **an MS in Robotics from Carnegie Mellon University**, and **an MS and BS in Mechanical Engineering** from National Chiao Tung University (交通大學).",
+    "I built an RC quadrotor back in 2014 for fun and then accidentally kept working on flying drones for over a decade now. Since then, I've worked at four drone companies: **Near Earth Autonomy**, **DJI (大疆)**, **Skydio**, and most recently **Zipline**. Drones are an incredible platform, challenging enough to be a serious robotics problem, yet practical to make an incremental impact on everyday life. Plus, there's something oddly satisfying about analyzing aerial imagery shot from 300 feet up.."
   ],
 
   "timeline": {

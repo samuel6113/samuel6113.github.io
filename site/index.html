@@ -221,6 +221,20 @@
         return node;
       }
 
+      // Minimal inline formatting for content strings.
+      // Escapes HTML first, then supports:  **bold**  *italic*  [link](https://url)
+      function fmt(text) {
+        var s = String(text)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+        s = s.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+        s = s.replace(/\*(.+?)\*/g, "<em>$1</em>");
+        s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
+          '<a href="$2" target="_blank" rel="noopener">$1</a>');
+        return s;
+      }
+
       function render(data) {
         // Head + intro
         if (data.name) document.title = data.name;
@@ -229,7 +243,7 @@
         introText.appendChild(el("h1", { textContent: data.name || "" }));
         if (data.role) introText.appendChild(el("p", { className: "role", textContent: data.role }));
         (data.intro || []).forEach(function (p) {
-          introText.appendChild(el("p", { textContent: p }));
+          introText.appendChild(el("p", { innerHTML: fmt(p) }));
         });
 
         var photo = document.getElementById("intro-photo");
@@ -254,7 +268,7 @@
 
           if (item.bullets && item.bullets.length) {
             var ul = el("ul");
-            item.bullets.forEach(function (b) { ul.appendChild(el("li", { textContent: b })); });
+            item.bullets.forEach(function (b) { ul.appendChild(el("li", { innerHTML: fmt(b) })); });
             article.appendChild(el("div", { className: "t-desc" }, [ul]));
           }
           container.appendChild(article);
