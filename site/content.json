@@ -15,41 +15,63 @@
   ],
 
   "timeline": {
-    "title": "Experience & Projects",
+    "title": "Experience & Projects (Work In Progress)",
     "subtitle": "Projects and roles across school and companies.",
     "items": [
       {
-        "date": "Mon YYYY – Mon YYYY",
-        "title": "Autonomy Engineer",
+        "date": "2026/07",
+        "title": "New role as Perception Engineer",
+        "org": "Zipline",
+        "kind": "Company",
+        "bullets": [
+          "Working on the perception stack that helps the drone map the delivery site and pick a safe spot to drop your package."
+        ],
+        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=R0_bD8J7d0s", "alt": "Zipline Droid video" }
+      },
+      {
+        "date": "2026/05",
+        "title": "R10 Indoor Drone Launch",
         "org": "Skydio",
         "kind": "Company",
         "bullets": [
-          "[What you built / did — bullet one.]",
-          "[Impact or result — bullet two.]"
+          "Worked on the state estimation and computer vision stacks for this little bad boy."
         ],
-        "media": { "type": "image", "src": "skydio_logo.png", "alt": "Skydio", "width": 300 }
+        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=rn1Lt66M6nA", "alt": "Skydio video" }
       },
       {
-        "date": "Mon YYYY – Mon YYYY",
-        "title": "Project or Role Title",
-        "org": "Company Name",
+        "date": "2025/06",
+        "title": "Talk at CVPR 2025",
+        "org": "CVPR",
+        "kind": "Conference",
+        "bullets": [
+          "TODO",
+          "Workshop page - https://sites.google.com/view/vocvalc2025/speakers?authuser=0"
+        ],
+        "media": { "type": "youtube", "url": "https://www.youtube.com/live/oMN4mkdquWk", "alt": "CVPR video" }
+      },
+      {
+        "date": "2023/10",
+        "title": "NightSense Feature Launch",
+        "org": "Skydio",
         "kind": "Company",
         "bullets": [
-          "[What you built / did — bullet one.]",
-          "[Impact or result — bullet two.]"
+          "TODO"
         ],
-        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=tXBwxYIHPrQ", "alt": "Skydio video" }
+        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=YnRQARTYK70", "alt": "Skydio video" }
       },
       {
-        "date": "Mon YYYY – Mon YYYY",
-        "title": "School Project or Coursework",
-        "org": "University / School Name",
-        "kind": "School",
+        "date": "2022/12",
+        "title": "Vision Positioning System Feature Launch",
+        "org": "Skydio",
+        "kind": "Company",
         "bullets": [
-          "[Description of the project — bullet one.]",
-          "[Outcome or what you learned — bullet two.]"
-        ]
+          "TODO"
+        ],
+        "media": { "type": "youtube", "url": "https://youtu.be/BrfeUgGtLCY?si=fE4IBvwR7BXV-aWc&t=88", "alt": "Skydio video" }
       }
     ]
   }
 }
+
+
+
