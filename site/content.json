@@ -11,7 +11,7 @@
   "intro": [
     "I'm a roboticist based in the San Francisco Bay Area, passionate about building robots that can understand their environment, take on intelligent tasks, and make a real, positive impact on people's lives.",
     "I was born in Southern California, raised in Taiwan for 20 years, and moved back to the States for grad school and work. I hold **an MS in Robotics** from Carnegie Mellon University, and **an MS and BS in Mechanical Engineering** from National Chiao Tung University (交通大學).",
-    "I built an RC quadrotor back in 2014 for fun and then accidentally kept working on flying drones for over a decade now. Since then, I've worked at four drone companies: **Near Earth Autonomy**, **DJI (大疆)**, **Skydio**, and most recently **Zipline**. Drones are an incredible platform, challenging enough to be a serious robotics problem, yet practical to make an incremental impact on everyday life. Plus, there's something oddly satisfying about analyzing aerial images from 300 feet up.."
+    "I built an RC Quadcopter back in 2015 for fun and then accidentally kept working on flying drones for over a decade now. Since then, I've worked at four drone companies: **Near Earth Autonomy**, **DJI (大疆)**, **Skydio**, and most recently **Zipline**. Drones are an incredible platform, challenging enough to be a serious robotics problem, yet practical to make an incremental impact on everyday life. Plus, there's something oddly satisfying about analyzing aerial images from 300 feet up.."
   ],
 
   "timeline": {
@@ -26,7 +26,7 @@
         "bullets": [
           "Working on the perception stack that helps the drone map the delivery site and pick a safe spot to drop your package."
         ],
-        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=R0_bD8J7d0s", "alt": "Zipline Droid video" }
+        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=R0_bD8J7d0s", "alt": "Zipline video" }
       },
       {
         "date": "2026/05",
@@ -67,7 +67,118 @@
         "bullets": [
           "TODO"
         ],
-        "media": { "type": "youtube", "url": "https://youtu.be/BrfeUgGtLCY?si=fE4IBvwR7BXV-aWc&t=88", "alt": "Skydio video" }
+        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=BrfeUgGtLCY&t=88s", "alt": "Skydio video" }
+      },
+      {
+        "date": "2021/06",
+        "title": "3D Scan Feature Launch",
+        "org": "Skydio",
+        "kind": "Company",
+        "bullets": [
+          "TODO"
+        ],
+        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=rzOrle_Dq_E", "alt": "Skydio video" }
+      },
+      {
+        "date": "2020/10",
+        "title": "L1 Lidar Payload Launch",
+        "org": "DJI",
+        "kind": "Company",
+        "bullets": [
+          "TODO"
+        ],
+        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=c0v-oCD8bX0", "alt": "DJI video" }
+      },
+      {
+        "date": "2019/11",
+        "title": "Talk at IROS 2019",
+        "org": "IROS",
+        "kind": "Conference",
+        "bullets": [
+          "TODO",
+          "Workshop page - https://wp.nyu.edu/workshopiros2019mav/"
+        ],
+        "media": { "type": "image", "url": "skydio_logo.png", "alt": "Conference Pic" }
+      },
+      {
+        "date": "2017/02",
+        "title": "Matrice 200 Drone Launch",
+        "org": "DJI",
+        "kind": "Company",
+        "bullets": [
+          "TODO"
+        ],
+        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=xWzybek2gDw", "alt": "DJI video" }
+      },
+      {
+        "date": "2016/12",
+        "title": "Robotic Path Planning in Dynamic Environment",
+        "org": "CMU - RI",
+        "kind": "School",
+        "bullets": [
+          "TODO"
+        ],
+        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=lpr8BXa6WkE", "alt": "CMU video" }
+      },
+      {
+        "date": "2016/08",
+        "title": "Attitude Estimation with Error State Kalman Filter",
+        "org": "CMU - RI",
+        "kind": "School",
+        "bullets": [
+          "TODO"
+        ],
+        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=SPNKIqhjYYE", "alt": "CMU video" }
+      },
+      {
+        "date": "2016/05",
+        "title": "Autonomous Quadcopter Landing on a Moving Shipdeck",
+        "org": "Near Earth Autonomy",
+        "kind": "Company",
+        "bullets": [
+          "Year-long industry sponsored capstone project"
+        ],
+        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=Q_BxnGtUbDk", "alt": "CMU video" }
+      },
+      {
+        "date": "2016/05",
+        "title": "Motion Planning and Obstacle Avoidance for Autonomous ATVs",
+        "org": "CMU - RI",
+        "kind": "School",
+        "bullets": [
+          "TODO"
+        ],
+        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=LibnO8_Sjm0", "alt": "CMU video" }
+      },
+      {
+        "date": "2015/07",
+        "title": "Built my first Quadcopter",
+        "org": "National Chiao Tung University",
+        "kind": "School",
+        "bullets": [
+          "TODO"
+        ],
+        "media": { "type": "image", "url": "aa.png", "alt": "First Drone Pic" }
+      },
+      {
+        "date": "2014/04",
+        "title": "Published 3 Journal Papers on Sensorless BLDC Motor Drive",
+        "org": "National Chiao Tung University",
+        "kind": "School",
+        "bullets": [
+          "TODO"
+        ],
+        "media": { "type": "image", "url": "aa.png", "alt": "BLCD Paper Pic" }
+      },
+      {
+        "date": "2012/04",
+        "title": "Formula SAE Hybrid",
+        "org": "National Chiao Tung University",
+        "kind": "School",
+        "bullets": [
+          "TODO"
+        ],
+        "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=N7y3nXQ3Ntg", "alt": "NCTU video" }
       }
     ]
   }
