@@ -109,7 +109,7 @@
           "TODO",
           "Workshop page - https://wp.nyu.edu/workshopiros2019mav/"
         ],
-        "media": { "type": "image", "url": "skydio_logo.png", "alt": "Conference Pic" }
+        "media": { "type": "image", "url": "images/iros_2019.jpg", "alt": "IROS 2019 Conference Pic" }
       },
       {
         "date": "2017/02",
@@ -169,7 +169,7 @@
         "bullets": [
           "TODO"
         ],
-        "media": { "type": "image", "url": "first_drone.JPG", "alt": "First Drone Pic" }
+        "media": { "type": "image", "url": "images/first_drone.JPG", "alt": "First Drone Pic" }
       },
       {
         "date": "2014/04",
@@ -177,7 +177,9 @@
         "org": "National Chiao Tung University",
         "kind": "School",
         "bullets": [
-          "TODO"
+          "A 12-Step Sensorless Drive for Brushless DC Motors Based on Back-EMF Differences, IEEE Trans. on Energy Conversion 2014",
+          "A  Current Index Approach to Compensate Communication Phase Error for Sensorless Brushless DC Motors With Nonideal Back EMF, IEEE Trans. on Power Electronics 2015",
+          "Disturbance Observer Structure Applied to Sensorless BLDC Motors Drive. Int. J. Comput Theory Eng. 2015"
         ],
         "media": { "type": "image", "url": "aa.png", "alt": "BLCD Paper Pic" }
       },

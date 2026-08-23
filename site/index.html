@@ -368,7 +368,12 @@
             "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
         } else {
           // "image" covers PNG / JPG / GIF
-          node = el("img", { src: m.src || "", alt: m.alt || "", loading: "lazy" });
+          node = el("img", {
+            src: m.url || m.src || "",
+            alt: m.alt || "",
+            loading: "lazy",
+            decoding: "async"
+          });
         }
         if (m.width) node.style.width = typeof m.width === "number" ? m.width + "px" : m.width;
         return el("div", { className: "t-media" }, [node]);
