@@ -15,7 +15,7 @@
   ],
 
   "timeline": {
-    "title": "Experience & Projects (Work In Progress)",
+    "title": "Experience & Projects",
     "subtitle": "In chronological order, open the toggles for some cool visuals!",
     "items": [
       {
@@ -24,7 +24,7 @@
         "org": "Zipline",
         "kind": "Company",
         "bullets": [
-          "Working on the perception stack that helps the drone map the delivery site and pick a safe spot to drop your package."
+          "Working on the deep-learning based perception stack that helps the drone map the delivery site and pick a safe spot to drop your package."
         ],
         "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=R0_bD8J7d0s", "alt": "Zipline video" }
       },
@@ -45,9 +45,10 @@
         "kind": "Conference",
         "bullets": [
           "Presented Skydio's tech stack on Visual-Inertial Navigation and Relocalization.",
+          "https://www.youtube.com/live/oMN4mkdquWk?si=npjqkUnX-wEuzsg1&t=31194",
           "Workshop page - https://sites.google.com/view/vocvalc2025/speakers?authuser=0"
         ],
-        "media": { "type": "youtube", "url": "https://www.youtube.com/live/oMN4mkdquWk", "alt": "CVPR video" }
+        "media": { "type": "image", "url": "images/cvpr_2025.png", "alt": "CVPR 2025 pic" }
       },
       {
         "date": "2023/10",
@@ -55,8 +56,8 @@
         "org": "Skydio",
         "kind": "Company",
         "bullets": [
-          "TODO a combined hardware-and-software system: the physical light attachments (visible or IR) paired with tuned imaging/autonomy software that lets the X10's navigation cameras keep doing vision-based obstacle avoidance and autonomous flight in total darkness",
-          "Led this project from the first prototype, to several generation hardware, "
+          "Led the cross-functional development from the first prototype through several generations of hardware, X2, X10 and R10", 
+          "NightSense enables autonomous visual navigation in no-light environments and unlocks true 24/7 all-day, all-night autonomy"
         ],
         "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=YnRQARTYK70", "alt": "Skydio video" }
       },
@@ -66,7 +67,7 @@
         "org": "Skydio",
         "kind": "Company",
         "bullets": [
-          "Worked on the state estimation and obstacle avoidance stacks"
+          "Developed the visual-inertial odometry (VIO), learning-based obstacle avoidance, GNSS/INS navigation, and factory calibration systems using six fisheye navigation cameras, a high-resolution gimbal camera, a thermal camera, IMUs, GPS, and a barometer"
         ],
         "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=GRdM-BxlBQg", "alt": "Skydio video" }
       },
@@ -86,7 +87,7 @@
         "org": "Skydio",
         "kind": "Company",
         "bullets": [
-          "TODO"
+          "An autonomous drone solution to automate flight profiles and data capture in unstructured environments, enabling the creation of high-res digital twins, orthomosaics, and accurate 3D models"
         ],
         "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=rzOrle_Dq_E", "alt": "Skydio video" }
       },
@@ -96,7 +97,7 @@
         "org": "DJI",
         "kind": "Company",
         "bullets": [
-          "TODO"
+          "A LiDAR-based payload for cm-level survey mapping and real-time visualization, integrating LiDAR, camera, IMU, and RTK sensors"
         ],
         "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=c0v-oCD8bX0", "alt": "DJI video" }
       },
@@ -106,7 +107,7 @@
         "org": "IROS",
         "kind": "Conference",
         "bullets": [
-          "TODO",
+          "On vision-based autonomous drones",
           "Workshop page - https://wp.nyu.edu/workshopiros2019mav/"
         ],
         "media": { "type": "image", "url": "images/iros_2019.jpg", "alt": "IROS 2019 Conference Pic" }
@@ -117,7 +118,7 @@
         "org": "DJI",
         "kind": "Company",
         "bullets": [
-          "TODO"
+          "An drone built for enterprise applications, featuring obstacle avoidance, and a modular payload system for interchangeable cameras and sensors"
         ],
         "media": { "type": "youtube", "url": "https://www.youtube.com/watch?v=xWzybek2gDw", "alt": "DJI video" }
       },
